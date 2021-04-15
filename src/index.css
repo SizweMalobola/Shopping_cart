@@ -2,9 +2,184 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Pirata One", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+#container {
+  position: relative;
+  background-image: url("http://cdn.wallpapername.com/1400x911/20121102/horror%20movies%20rain%20jason%20friday%20the%2013th%20jason%20voorhees%201400x911%20wallpaper_www.wallpapername.com_65.jpg");
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+/* navbar */
+#navbar {
+  display: flex;
+  background: linear-gradient(black, #dc143c 90%);
+  position: fixed;
+  top: 0;
+  z-index: 4;
+  width: 100%;
+}
+#logo-div {
+  background-color: transparent;
+  flex-grow: 1;
+}
+#logo-div img {
+  margin-left: 1rem;
+  max-width: 120px;
+  min-width: 100px;
+}
+#nav-links-div {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 2rem;
+}
+#nav-links-div a {
+  text-decoration: none;
+  color: white;
+  margin-right: 5px;
+  padding: 2rem;
+  background-color: transparent;
+  transition: all linear 300ms;
+}
+#nav-links-div a:hover {
+  background-color: rgb(102, 102, 102);
+}
+
+/* media query for navbar */
+/* ----- */
+/* wave */
+#wave-div {
+  /* z-index: 4;
+  position: fixed;
+  top: 121px;
+  left: 0;
+  right: 0; */
+  /*  */
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 120px;
+  background-color: grey;
+}
+#wave-div svg {
+  transform: rotate(180deg);
+  position: fixed;
+  left: 0;
+  top: 13%;
+  width: 100%;
+  height: 178px;
+  z-index: 11;
+}
+/* ---- */
+#shop-div {
+  position: relative;
+  display: flex;
+}
+.header {
+  position: fixed;
+  top: 11.8%;
+  z-index: 12;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 4rem;
+  text-shadow: white 2px 2px 2px;
+}
+/* ---- */
+#shop-nav-div {
+  z-index: 8;
+  position: fixed;
+  top: 13.5%;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: crimson;
+  flex-grow: 1;
+  padding: 1rem;
+  padding-top: 8.8rem;
+}
+/* #shop-nav-div ul {
+} */
+#shop-nav-div ul li {
+  font-size: 2rem;
+  background-color: ivory;
+  margin-bottom: 5px;
+  transition: all linear 300ms;
+}
+#shop-nav-div ul li:first-child {
+  margin-bottom: 1.5rem;
+}
+#shop-nav-div ul li:hover:not(:first-child) {
+  cursor: pointer;
+  font-size: 2rem;
+  background-color: darkred;
+}
+/* ---- */
+#shop-grid-div {
+  margin-top: 5rem;
+  z-index: 2;
+  position: relative;
+  top: 15%;
+  background-color: transparent;
+  flex-grow: 4;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-left: 200px;
+}
+.card-div {
+  background-color: rgba(0, 0, 0, 0.26);
+  color: ghostwhite;
+  width: 100%;
+  height: 550px;
+  min-height: 440px;
+  padding: 1rem;
+  transition: all linear 300ms;
+}
+.card-div:hover {
+  background-color: rgba(0, 0, 0, 0.473);
+  color: crimson;
+}
+.card-top {
+  height: 85%;
+  width: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-position: center; */
+}
+/* .card-bottom {
+} */
+.card-bottom div {
+  /* background-color: cadetblue; */
+}
+.card-bottom h1 {
+  /* find out a way to cut off words before they start in a new line */
+}
+.quantity {
+  width: 20%;
+  padding: 10px;
+}
+.add-to-cart {
+  padding: 10px;
+  background-color: rgb(39, 160, 39);
+}
+/* ---- */
+#cart {
+  position: fixed;
+  right: 1%;
+  z-index: 333;
+  background-color: gray;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border: 2px ghostwhite solid;
+  padding: 3px;
 }

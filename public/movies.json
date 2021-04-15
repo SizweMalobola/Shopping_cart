@@ -1,0 +1,80 @@
+[
+  {
+    "tag": ["gore"],
+    "price": 145,
+    "title": "Army Of Darkness",
+    "image": "/assets/army-of-darkness.jpeg"
+  },
+  {
+    "tag": [],
+    "price": 145,
+    "title": "Cabinet Of Dr Caligari",
+    "image": "/assets/cabinet-of-dr-caligari.jpeg"
+  },
+  {
+    "tag": [],
+    "price": 145,
+    "title": "Carrie",
+    "image": "/assets/carrie.jpeg"
+  },
+  {
+    "tag": ["slasher"],
+    "price": 145,
+    "title": "Childs Play",
+    "image": "/assets/childs-play.jpeg"
+  },
+  {
+    "tag": ["gore"],
+    "price": 145,
+    "title": "Evil Dead 2",
+    "image": "/assets/evil-dead-2.jpeg"
+  },
+  {
+    "tag": ["gore"],
+    "price": 145,
+    "title": "From Beyond",
+    "image": "/assets/from-beyond.png"
+  },
+  {
+    "tag": ["slasher"],
+    "price": 145,
+    "title": "Helloween",
+    "image": "/assets/helloween.jpeg"
+  },
+  {
+    "tag": ["gore"],
+    "price": 145,
+    "title": "Hellraiser",
+    "image": "/assets/hellraiser.jpeg"
+  },
+  {
+    "tag": [],
+    "price": 145,
+    "title": "I Spit On Your Grave",
+    "image": "/assets/i-spit-on-your-grave.jpeg"
+  },
+  {
+    "tag": [],
+    "price": 145,
+    "title": "The Blair Witch Project",
+    "image": "/assets/the-blair-witch-project.jpeg"
+  },
+  {
+    "tag": ["gore"],
+    "price": 145,
+    "title": "The Evil Dead",
+    "image": "/assets/the-devil-dead.jpeg"
+  },
+  {
+    "tag": ["gore"],
+    "price": 145,
+    "title": "The Hills Have Eyes",
+    "image": "/assets/the-hills-have-eyes.png"
+  },
+  {
+    "tag": [],
+    "price": 145,
+    "title": "The Texas Chainsaw Massacre",
+    "image": "/assets/the-texas-chainsaw-massacre.jpeg"
+  }
+]
