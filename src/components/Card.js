@@ -16,7 +16,7 @@ export default class Card extends Component {
   }
 
   render() {
-    const { image, title } = this.props;
+    const { image, title, handler } = this.props;
     return (
       <div id={this.makeId(title)} className="card-div">
         <div
@@ -39,8 +39,17 @@ export default class Card extends Component {
                 let quantity = e.target.previousSibling;
                 if (quantity.value >= 1) {
                   let cardId = e.target.parentNode.parentNode.parentNode;
-                  this.setState({ cState: this.state.cState.push(2) });
-                  console.log(this.state.cState);
+                  let image = cardId.querySelector(".card-top");
+                  image = image.style.backgroundImage;
+                  // console.log(image.substring(5, image.length - 2));
+                  // return title and quantity
+                  handler({
+                    title: title,
+                    id: cardId,
+                    quantity: parseInt(quantity.value),
+                    image: image.substring(5, image.length - 2),
+                    price: 140,
+                  });
                 }
               }}
             >

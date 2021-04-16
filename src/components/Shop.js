@@ -8,7 +8,7 @@ export default class Shop extends Component {
     super(props);
 
     this.state = {
-      cartObj: [],
+      cartArray: [],
       moviesArray: [
         {
           tag: ["gore"],
@@ -91,30 +91,82 @@ export default class Shop extends Component {
       ],
     };
     this.getObj = this.getObj.bind(this);
+    this.updateCart = this.updateCart.bind(this);
+    // this.logCart = this.logCart.bind(this);
   }
   componentDidMount() {
     console.log("did mount");
-    console.log(this.state.cartObj);
     // set json data as state value
   }
-  componentDidUpdate() {}
+  componentDidUpdate() {
+    console.log("did update");
+    // console.log(this.state.cartArray);
+    // update cart
+    this.updateCart();
+  }
+  updateCart() {
+    const cartSpan = document.querySelector("#cart-span");
+    cartSpan.innerText = this.state.cartArray.length;
+    console.log(this.state.cartArray);
+  }
+  // logCart() {
+  //   // function that will log out the contents of cart, when cart component is clicked
+  //   console.log(this.state.cartArray);
+  // }
+
   getObj(obj) {
-    // this.setState({ cartObj: obj });
-    // console.log(this.state.cartObj);
-    console.log(obj);
+    // I want to check if there is an object in cartArray with the same title as obj.
+    //  if there is, take obj's quantity prop and add it to the existing quantity. note that quantity prop for each obj must not exceed 3.
+    // else push obj to cartArray.
+    if (this.state.cartArray.length > 0) {
+      console.log("state isnt empty");
+      this.state.cartArray.forEach((cartObj, index) => {
+        console.log(cartObj.title, obj.title);
+        if (cartObj.title === obj.title) {
+          if (cartObj.quantity === 3) {
+            console.log(`${cartObj.title} has reached max quantity`);
+          } else if (cartObj.quantity + obj.quantity <= 3) {
+            console.log("less than or equal to 3");
+            let items = [...this.state.cartArray];
+            let item = { ...items[index] };
+            item.quantity += obj.quantity;
+            items[index] = item;
+            this.setState((state) => ({
+              cartArray: items,
+            }));
+          } else if (cartObj.quantity + obj.quantity > 3) {
+            console.log("greater than 3");
+            this.setState((state) => {
+              state.cartArray[index].quantity = 3;
+            });
+          }
+        } else if (index === this.state.cartArray.length - 1) {
+          console.log("there are no title matches");
+          this.setState({
+            cartArray: [...this.state.cartArray, obj],
+          });
+        }
+      });
+    } else {
+      console.log("state was empty");
+      this.setState({
+        cartArray: [...this.state.cartArray, obj],
+      });
+      console.log(this.state.cartArray);
+    }
   }
 
   render() {
     return (
       <div id="shop-div">
         <h1 className="header">Shop here</h1>
-        <Cart />
+        <Cart cartItems={this.state.cartArray} />
         <ShopNav />
         <ShopGrid>
           {this.state.moviesArray.map((obj, index) => {
             return (
               <Card
-                cState={this.state.cartObj}
+                handler={this.getObj}
                 key={index}
                 title={obj.title}
                 image={obj.image}

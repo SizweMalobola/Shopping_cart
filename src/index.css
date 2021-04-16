@@ -183,3 +183,12 @@
   border: 2px ghostwhite solid;
   padding: 3px;
 }
+#cart-list {
+  color: red;
+  z-index: 100;
+  position: fixed;
+  right: 1%;
+  top: 20.7%;
+  background: honeydew;
+  padding: 1rem;
+}
