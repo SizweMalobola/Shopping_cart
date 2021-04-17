@@ -92,6 +92,8 @@ export default class Shop extends Component {
     };
     this.getObj = this.getObj.bind(this);
     this.updateCart = this.updateCart.bind(this);
+    this.removeCartItem = this.removeCartItem.bind(this);
+    this.filterBy = this.filterBy.bind(this);
     // this.logCart = this.logCart.bind(this);
   }
   componentDidMount() {
@@ -113,6 +115,17 @@ export default class Shop extends Component {
   //   // function that will log out the contents of cart, when cart component is clicked
   //   console.log(this.state.cartArray);
   // }
+  removeCartItem(index) {
+    let items = this.state.cartArray;
+    let removedItem = items.splice(index, 1);
+    this.setState({ cartArray: items });
+    console.log(`item ${removedItem.title} was removed`);
+  }
+  filterBy(type) {
+    type = type.toLowerCase();
+    if (type === "all") {
+    }
+  }
 
   getObj(obj) {
     // I want to check if there is an object in cartArray with the same title as obj.
@@ -160,7 +173,10 @@ export default class Shop extends Component {
     return (
       <div id="shop-div">
         <h1 className="header">Shop here</h1>
-        <Cart cartItems={this.state.cartArray} />
+        <Cart
+          removeItem={this.removeCartItem}
+          cartItems={this.state.cartArray}
+        />
         <ShopNav />
         <ShopGrid>
           {this.state.moviesArray.map((obj, index) => {
