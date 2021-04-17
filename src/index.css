@@ -153,15 +153,11 @@ button:hover {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  /* background-position: center; */
-}
-/* .card-bottom {
-} */
-.card-bottom div {
-  /* background-color: cadetblue; */
 }
 .card-bottom h1 {
-  /* find out a way to cut off words before they start in a new line */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .quantity {
   width: 20%;
