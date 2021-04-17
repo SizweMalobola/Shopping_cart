@@ -1,7 +1,26 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-
+import "./navbarStyles.css";
 export default class Navbar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+    this.activateNav = this.activateNav.bind(this);
+  }
+  activateNav(targetElement) {
+    let navDiv = document.querySelector("#nav-links-div");
+    let navLinks = navDiv.querySelectorAll("a");
+    // first remove current acive stat
+    navLinks.forEach((link) => {
+      if (link.classList.contains("nav-link-active")) {
+        link.classList.remove("nav-link-active");
+      }
+      //  set new active link
+      targetElement.classList.add("nav-link-active");
+    });
+  }
+  componentDidMount() {}
+
   render() {
     return (
       <>
@@ -14,11 +33,33 @@ export default class Navbar extends Component {
           </div>
 
           <div id="nav-links-div">
-            <Link to="/">HOME</Link>
+            <Link
+              to="/"
+              className="nav-link-active"
+              onClick={(e) => {
+                this.activateNav(e.target);
+              }}
+            >
+              HOME
+            </Link>
 
-            <Link to="/shop">SHOP</Link>
+            <Link
+              to="/shop"
+              onClick={(e) => {
+                this.activateNav(e.target);
+              }}
+            >
+              SHOP
+            </Link>
 
-            <Link to="/about">About</Link>
+            <Link
+              to="/about"
+              onClick={(e) => {
+                this.activateNav(e.target);
+              }}
+            >
+              About
+            </Link>
           </div>
         </nav>
         <div id="wave-div">

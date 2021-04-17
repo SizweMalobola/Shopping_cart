@@ -12,59 +12,12 @@ button {
 button:hover {
   cursor: pointer;
 }
-/* navbar */
-#navbar {
-  display: flex;
-  background: linear-gradient(black, #dc143c 90%);
-  position: fixed;
-  top: 0;
-  z-index: 4;
-  width: 100%;
-}
-#logo-div {
-  background-color: transparent;
-  flex-grow: 1;
-}
-#logo-div img {
-  margin-left: 1rem;
-  max-width: 120px;
-  min-width: 100px;
-}
-#nav-links-div {
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  font-size: 2rem;
-}
-#nav-links-div a {
-  text-decoration: none;
-  color: white;
-  margin-right: 5px;
-  padding: 2rem;
-  background-color: transparent;
-  transition: all linear 300ms;
-}
-#nav-links-div a:hover {
+/* nav-link-active */
+.nav-link-active {
+  color: aqua;
   background-color: rgb(102, 102, 102);
 }
-
-/* media query for navbar */
-/* ----- */
-/* wave */
-#wave-div {
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 0;
-  background-color: grey;
-}
-#wave-div svg {
-  transform: rotate(180deg);
-  position: fixed;
-  left: 0;
-  top: 13%;
-  width: 100%;
-  height: 178px;
-  z-index: 11;
+.nav-link-active a {
+  color: aqua;
+  background-color: rgb(102, 102, 102);
 }

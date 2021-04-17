@@ -94,53 +94,14 @@ export default class Shop extends Component {
     this.getObj = this.getObj.bind(this);
     this.updateCart = this.updateCart.bind(this);
     this.removeCartItem = this.removeCartItem.bind(this);
-    this.filterBy = this.filterBy.bind(this);
-    // this.logCart = this.logCart.bind(this);
   }
-  componentDidMount() {
-    console.log("did mount");
-    // set json data as state value
-  }
-  componentDidUpdate() {
-    console.log("did update");
-    // console.log(this.state.cartArray);
-    // update cart
-    this.updateCart();
-  }
-  updateCart() {
-    const cartSpan = document.querySelector("#cart-span");
-    cartSpan.innerText = this.state.cartArray.length;
-    console.log(this.state.cartArray);
-  }
-  // logCart() {
-  //   // function that will log out the contents of cart, when cart component is clicked
-  //   console.log(this.state.cartArray);
-  // }
-  removeCartItem(index) {
-    let items = this.state.cartArray;
-    let removedItem = items.splice(index, 1);
-    this.setState({ cartArray: items });
-    console.log(`item ${removedItem.title} was removed`);
-  }
-  filterBy(type) {
-    type = type.toLowerCase();
-    if (type === "all") {
-    }
-  }
-
+  // instance methods
   getObj(obj) {
-    // I want to check if there is an object in cartArray with the same title as obj.
-    //  if there is, take obj's quantity prop and add it to the existing quantity. note that quantity prop for each obj must not exceed 3.
-    // else push obj to cartArray.
     if (this.state.cartArray.length > 0) {
-      console.log("state isnt empty");
       this.state.cartArray.forEach((cartObj, index) => {
-        console.log(cartObj.title, obj.title);
         if (cartObj.title === obj.title) {
           if (cartObj.quantity === 3) {
-            console.log(`${cartObj.title} has reached max quantity`);
           } else if (cartObj.quantity + obj.quantity <= 3) {
-            console.log("less than or equal to 3");
             let items = [...this.state.cartArray];
             let item = { ...items[index] };
             item.quantity += obj.quantity;
@@ -149,25 +110,40 @@ export default class Shop extends Component {
               cartArray: items,
             }));
           } else if (cartObj.quantity + obj.quantity > 3) {
-            console.log("greater than 3");
             this.setState((state) => {
               state.cartArray[index].quantity = 3;
             });
           }
         } else if (index === this.state.cartArray.length - 1) {
-          console.log("there are no title matches");
           this.setState({
             cartArray: [...this.state.cartArray, obj],
           });
         }
       });
     } else {
-      console.log("state was empty");
       this.setState({
         cartArray: [...this.state.cartArray, obj],
       });
-      console.log(this.state.cartArray);
     }
+  }
+  updateCart() {
+    const cartSpan = document.querySelector("#cart-span");
+    cartSpan.innerText = this.state.cartArray.length;
+    console.log(this.state.cartArray);
+  }
+  removeCartItem(index) {
+    let items = this.state.cartArray;
+    let removedItem = items.splice(index, 1);
+    this.setState({ cartArray: items });
+    console.log(`item ${removedItem.title} was removed`);
+  }
+  // lifecyle methods
+  componentDidMount() {
+    console.log("componentDidMount");
+  }
+  componentDidUpdate() {
+    console.log("componentDidUpdate");
+    this.updateCart();
   }
 
   render() {
