@@ -1,11 +1,4 @@
 /* styling that only applies to the shop page */
-#container {
-  position: relative;
-  background-image: url("http://cdn.wallpapername.com/1400x911/20121102/horror%20movies%20rain%20jason%20friday%20the%2013th%20jason%20voorhees%201400x911%20wallpaper_www.wallpapername.com_65.jpg");
-  background-position: top;
-  background-size: cover;
-  background-attachment: fixed;
-}
 /*  */
 #shop-div {
   position: relative;
