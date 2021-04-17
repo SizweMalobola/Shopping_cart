@@ -3,6 +3,7 @@ import Card from "./Card";
 import Cart from "./Cart";
 import ShopGrid from "./ShopGrid";
 import ShopNav from "./ShopNav";
+import "./shopStyles.css";
 export default class Shop extends Component {
   constructor(props) {
     super(props);
