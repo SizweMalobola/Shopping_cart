@@ -78,14 +78,25 @@ export default class Cart extends Component {
                 </div>
                 <div id="cart-footer">
                   <h1>
-                    Total <span>: R {cartItems.length * 140}</span>
+                    Total{" "}
+                    <span>
+                      : R{" "}
+                      {cartItems.reduce((total, current) => {
+                        return (total += current.quantity * current.price);
+                      }, 0)}
+                    </span>
                   </h1>
                   <button id="checkout-btn">proceed to checkout</button>
                 </div>
               </div>
             </div>
           ) : (
-            <div id="cart-empty">
+            <div
+              id="cart-empty"
+              onClick={() => {
+                this.toggleClicked();
+              }}
+            >
               <h3>Your Cart is Empty</h3>
             </div>
           ))}
