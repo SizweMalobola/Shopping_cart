@@ -96,6 +96,7 @@ export default class Shop extends Component {
     this.updateCart = this.updateCart.bind(this);
     this.removeCartItem = this.removeCartItem.bind(this);
     this.activateShopNav = this.activateShopNav.bind(this);
+    this.cartLocalStorage = this.cartLocalStorage.bind(this);
   }
   // instance methods
   getObj(obj) {
@@ -128,6 +129,23 @@ export default class Shop extends Component {
       });
     }
   }
+  cartLocalStorage() {
+    const state = this.state.cartArray;
+    const getCircularReplacer = () => {
+      const seen = new WeakSet();
+      return (key, value) => {
+        if (typeof value === "object" && value !== null) {
+          if (seen.has(value)) {
+            return;
+          }
+          seen.add(value);
+        }
+        return value;
+      };
+    };
+    const cartContent = JSON.stringify(state, getCircularReplacer());
+    localStorage.setItem("cart", cartContent);
+  }
   updateCart() {
     const cartSpan = document.querySelector("#cart-span");
     cartSpan.innerText = this.state.cartArray.length;
@@ -156,11 +174,18 @@ export default class Shop extends Component {
   }
   // lifecyle methods
   componentDidMount() {
+    // local cart storage
     console.log("componentDidMount");
+    let cart = localStorage.getItem("cart");
+    this.setState({ cartArray: JSON.parse(cart) });
   }
   componentDidUpdate() {
     console.log("componentDidUpdate");
     this.updateCart();
+  }
+  componentWillUnmount() {
+    this.cartLocalStorage();
+    console.log("stored");
   }
 
   render() {
