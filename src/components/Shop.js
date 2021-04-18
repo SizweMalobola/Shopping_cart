@@ -10,6 +10,7 @@ export default class Shop extends Component {
 
     this.state = {
       cartArray: [],
+      tag: "all",
       moviesArray: [
         {
           tag: ["gore"],
@@ -149,8 +150,9 @@ export default class Shop extends Component {
       //  set new active link
       targetElement.setAttribute("id", "nav-btn-active");
     });
-    // return element innerText [gore,all,slasher...]
-    return targetElement.innerText.toLowerCase();
+    // set tag state
+    let chosenTag = targetElement.innerText.toLowerCase();
+    this.setState({ tag: chosenTag });
   }
   // lifecyle methods
   componentDidMount() {
@@ -171,16 +173,24 @@ export default class Shop extends Component {
         />
         <ShopNav activationHandler={this.activateShopNav} />
         <ShopGrid>
-          {this.state.moviesArray.map((obj, index) => {
-            return (
-              <Card
-                handler={this.getObj}
-                key={index}
-                title={obj.title}
-                image={obj.image}
-              />
-            );
-          })}
+          {this.state.moviesArray
+            .filter((obj) => {
+              if (this.state.tag === "all") {
+                return obj;
+              } else {
+                return !obj.tag.indexOf(this.state.tag);
+              }
+            })
+            .map((obj, index) => {
+              return (
+                <Card
+                  handler={this.getObj}
+                  key={index}
+                  title={obj.title}
+                  image={obj.image}
+                />
+              );
+            })}
         </ShopGrid>
       </div>
     );
