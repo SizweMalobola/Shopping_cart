@@ -27,21 +27,28 @@
   flex-grow: 1;
   padding: 1rem;
   padding-top: 8.8rem;
+  display: flex;
+  flex-direction: column;
 }
 /* #shop-nav-div ul {
 } */
-#shop-nav-div ul li {
+#shop-nav-div button {
+  width: 100%;
   font-size: 2rem;
   background-color: ivory;
   margin-bottom: 5px;
   transition: all linear 300ms;
 }
-#shop-nav-div ul li:first-child {
+#shop-nav-div button:first-child {
   margin-bottom: 1.5rem;
 }
-#shop-nav-div ul li:hover:not(:first-child) {
+#shop-nav-div button:hover:not(:first-child) {
   cursor: pointer;
   font-size: 2rem;
+  background-color: darkred;
+}
+#nav-btn-active {
+  font-size: 5rem;
   background-color: darkred;
 }
 /* ---- */
@@ -95,7 +102,7 @@
 #cart {
   position: fixed;
   top: 13%;
-  right: 1%;
+  right: 5px;
   z-index: 23;
   background-color: rgb(102, 102, 102);
   height: 4rem;

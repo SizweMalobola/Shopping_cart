@@ -94,6 +94,7 @@ export default class Shop extends Component {
     this.getObj = this.getObj.bind(this);
     this.updateCart = this.updateCart.bind(this);
     this.removeCartItem = this.removeCartItem.bind(this);
+    this.activateShopNav = this.activateShopNav.bind(this);
   }
   // instance methods
   getObj(obj) {
@@ -137,6 +138,20 @@ export default class Shop extends Component {
     this.setState({ cartArray: items });
     console.log(`item ${removedItem.title} was removed`);
   }
+  activateShopNav(targetElement) {
+    let shopNavDiv = document.querySelector("#shop-nav-div");
+    let navBtns = shopNavDiv.querySelectorAll("button");
+    // first remove current acive stat
+    navBtns.forEach((btn) => {
+      if (btn.matches("#nav-btn-active")) {
+        btn.removeAttribute("id");
+      }
+      //  set new active link
+      targetElement.setAttribute("id", "nav-btn-active");
+    });
+    // return element innerText [gore,all,slasher...]
+    return targetElement.innerText.toLowerCase();
+  }
   // lifecyle methods
   componentDidMount() {
     console.log("componentDidMount");
@@ -154,7 +169,7 @@ export default class Shop extends Component {
           removeItem={this.removeCartItem}
           cartItems={this.state.cartArray}
         />
-        <ShopNav />
+        <ShopNav activationHandler={this.activateShopNav} />
         <ShopGrid>
           {this.state.moviesArray.map((obj, index) => {
             return (
