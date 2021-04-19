@@ -2,10 +2,9 @@
 #navbar {
   display: flex;
   background: linear-gradient(black, #dc143c 90%);
-  position: fixed;
-  top: 0;
   z-index: 4;
   width: 100%;
+  height: 15vh;
 }
 #logo-div {
   background-color: transparent;
@@ -47,10 +46,10 @@
 }
 #wave-div svg {
   transform: rotate(180deg);
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 13%;
   width: 100%;
-  height: 178px;
+  height: 170px;
   z-index: 11;
 }

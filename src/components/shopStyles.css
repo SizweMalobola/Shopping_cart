@@ -3,7 +3,7 @@
 #shop-div {
   position: relative;
   display: flex;
-  height: 100vh;
+  height: 85vh;
   overflow-y: scroll;
 }
 .header {
@@ -19,7 +19,7 @@
 #shop-nav-div {
   z-index: 8;
   position: fixed;
-  top: 13.5%;
+  /* top: 13.5%; */
   left: 0;
   width: 200px;
   height: 100vh;
@@ -56,7 +56,6 @@
   margin-top: 5rem;
   z-index: 2;
   position: relative;
-  top: 15%;
   background-color: transparent;
   flex-grow: 4;
   padding: 1rem;
@@ -101,17 +100,17 @@
 /* ---- */
 #cart {
   position: fixed;
-  top: 13%;
+  top: 13.5%;
   right: 5px;
   z-index: 23;
   background-color: rgb(102, 102, 102);
-  height: 4rem;
+  height: 3.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   color: black;
   border: 2px ghostwhite solid;
-  padding: 3px;
+  padding: 3px 2px;
 }
 #cart-container {
   z-index: 100;
@@ -147,7 +146,6 @@
 }
 #cart-list {
   height: 75vh;
-  background-color: thistle;
   overflow-y: scroll;
   margin-right: 4rem;
 }

@@ -90,6 +90,48 @@ export default class Shop extends Component {
           title: "The Texas Chainsaw Massacre",
           image: "/assets/the-texas-chainsaw-massacre.jpeg",
         },
+        {
+          tag: ["foreign"],
+          price: 145,
+          title: "Ringu",
+          image: "/assets/ringu.jpeg",
+        },
+        {
+          tag: [],
+          price: 145,
+          title: "Rosemary's Baby",
+          image: "/assets/rosemarys-baby.jpeg",
+        },
+        {
+          tag: ["foreign"],
+          price: 145,
+          title: "Suspiria",
+          image: "/assets/suspiria.jpeg",
+        },
+        {
+          tag: [],
+          price: 145,
+          title: "The Wicker Man",
+          image: "/assets/the-wicker-man.jpeg",
+        },
+        {
+          tag: ["gore"],
+          price: 145,
+          title: "Videodrome",
+          image: "/assets/videodrome.jpeg",
+        },
+        {
+          tag: ["gore", "foreign"],
+          price: 145,
+          title: "Rec",
+          image: "/assets/rec.jpeg",
+        },
+        {
+          tag: ["gore", "slasher"],
+          price: 145,
+          title: "Sleepaway Camp",
+          image: "/assets/sleepaway-camp.jpeg",
+        },
       ],
     };
     this.getObj = this.getObj.bind(this);
