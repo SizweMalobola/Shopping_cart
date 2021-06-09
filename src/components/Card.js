@@ -26,17 +26,14 @@ export default class Card extends Component {
         <div className="card-bottom">
           <h1>{title}</h1>
           <div>
-            <input
-              className="quantity"
-              type="number"
-              max="3"
-              min="1"
-              placeholder="1"
-            ></input>
+            <div>
+              <span>QTY:</span>
+              <input className="quantity" type="number" max="3" min="1"></input>
+            </div>
             <button
               className="add-to-cart"
               onClick={(e) => {
-                let quantity = e.target.previousSibling;
+                let quantity = e.target.previousSibling.lastChild;
                 if (quantity.value >= 1) {
                   let cardId = e.target.parentNode.parentNode.parentNode;
                   let image = cardId.querySelector(".card-top");
