@@ -7,11 +7,12 @@
 #logo-div {
   background-color: transparent;
   flex-grow: 1;
+  position: relative;
 }
 #logo-div img {
-  margin-left: 1rem;
-  max-width: 120px;
-  min-width: 100px;
+  position: absolute;
+  height: 100%;
+  left: 1rem;
 }
 #nav-links-div {
   background-color: transparent;
