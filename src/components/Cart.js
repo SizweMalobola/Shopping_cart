@@ -8,9 +8,19 @@ export default class Cart extends Component {
       clicked: false,
     };
     this.toggleClicked = this.toggleClicked.bind(this);
+    this.isEmptyRef = null;
   }
   toggleClicked() {
     this.setState({ clicked: !this.state.clicked });
+  }
+  // Todo clearTimeout
+  componentDidUpdate() {
+    if (this.isEmptyRef) {
+      let t = setTimeout(() => {
+        clearTimeout(t);
+        this.toggleClicked();
+      }, 3000);
+    }
   }
   render() {
     const { cartItems, removeItem } = this.props;
@@ -18,7 +28,7 @@ export default class Cart extends Component {
       <>
         <div id="cart" onClick={() => this.toggleClicked()}>
           <h1>
-            <FaShoppingCart /> Cart (<span id="cart-span">0</span>)
+            <FaShoppingCart /> <span id="cart-span">0</span>
           </h1>
         </div>
         {this.state.clicked &&
@@ -93,6 +103,7 @@ export default class Cart extends Component {
           ) : (
             <div
               id="cart-empty"
+              ref={(div) => (this.isEmptyRef = div)}
               onClick={() => {
                 this.toggleClicked();
               }}
