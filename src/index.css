@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  /*Todo change fonts */
   font-family: "Pirata One", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,19 +13,7 @@ button {
 button:hover {
   cursor: pointer;
 }
-/* nav-link-active */
-.nav-link-active {
-  color: aqua;
-  background-color: rgb(102, 102, 102);
-}
-.nav-link-active a {
-  color: aqua;
-  background-color: rgb(102, 102, 102);
-}
+
 #container {
   position: relative;
-  background-image: url("http://cdn.wallpapername.com/1400x911/20121102/horror%20movies%20rain%20jason%20friday%20the%2013th%20jason%20voorhees%201400x911%20wallpaper_www.wallpapername.com_65.jpg");
-  background-position: top;
-  background-size: cover;
-  background-attachment: fixed;
 }
