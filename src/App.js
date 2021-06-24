@@ -19,7 +19,7 @@ export default class App extends Component {
         <BrowserRouter>
           <Navbar />
           <Switch>
-            <Route path="/Shopping_cart" exact component={Home}></Route>
+            <Route path="/home" exact component={Home}></Route>
             <Route path="/shop" exact component={Shop}></Route>
             <Route path="/about" exact component={About}></Route>
           </Switch>
