@@ -16,10 +16,10 @@ export default class App extends Component {
   render() {
     return (
       <div id="container">
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Navbar />
           <Switch>
-            <Route path="/home" exact component={Home}></Route>
+            <Route path="/" exact component={Home}></Route>
             <Route path="/shop" exact component={Shop}></Route>
             <Route path="/about" exact component={About}></Route>
           </Switch>

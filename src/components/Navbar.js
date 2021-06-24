@@ -42,7 +42,7 @@ function Navbar() {
         </div>
 
         <div id="nav-links-div">
-          <Link to="/home" className={homeNav ? "active-nav-link" : null}>
+          <Link to="/" className={homeNav ? "active-nav-link" : null}>
             HOME
           </Link>
 
