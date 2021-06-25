@@ -1,33 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import React, { useEffect } from "react";
+import { NavLink, useHistory } from "react-router-dom";
 import "./navbarStyles.css";
 
 function Navbar() {
-  const [homeNav, setHomeNav] = useState(false);
-  const [shopNav, setShopNav] = useState(false);
-  const [aboutNav, setAboutNav] = useState(false);
-  // Todo figure out why doesn't pathname/history update when I click to different links
   const history = useHistory();
   useEffect(() => {
     let pathname = history.location.pathname;
-    // switch (pathname) {
-    //   case "/Shopping_cart":
-    //     setHomeNav(true);
-    //     setShopNav(false);
-    //     setAboutNav(false);
-    //     break;
-    //   case "/about":
-    //     setHomeNav(false);
-    //     setShopNav(false);
-    //     setAboutNav(true);
-    //     break;
-    //   default:
-    //     setHomeNav(false);
-    //     setShopNav(true);
-    //     setAboutNav(false);
-    //     break;
-    // }
-    // console.log(homeNav, shopNav, aboutNav);
     console.log(pathname);
   }, [history]);
 
@@ -42,17 +20,17 @@ function Navbar() {
         </div>
 
         <div id="nav-links-div">
-          <Link to="/" className={homeNav ? "active-nav-link" : null}>
+          <NavLink to="/" exact activeClassName="active-nav-link">
             HOME
-          </Link>
+          </NavLink>
 
-          <Link to="/shop" className={shopNav ? "active-nav-link" : null}>
+          <NavLink to="/shop" activeClassName="active-nav-link">
             SHOP
-          </Link>
+          </NavLink>
 
-          <Link to="/about" className={aboutNav ? "active-nav-link" : null}>
+          <NavLink to="/about" activeClassName="active-nav-link">
             ABOUT
-          </Link>
+          </NavLink>
         </div>
       </nav>
     </>
