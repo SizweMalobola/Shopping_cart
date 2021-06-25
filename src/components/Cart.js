@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { FaShoppingCart, FaSkullCrossbones, FaTrashAlt } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
+import ModalPortal from "./ModalPortal";
 
 export default class Cart extends Component {
   constructor(props) {
@@ -13,13 +14,13 @@ export default class Cart extends Component {
   toggleClicked() {
     this.setState({ clicked: !this.state.clicked });
   }
-  // Todo clearTimeout
+
+  //! fix
   componentDidUpdate() {
     if (this.isEmptyRef) {
-      let t = setTimeout(() => {
-        clearTimeout(t);
+      setTimeout(() => {
         this.toggleClicked();
-      }, 3000);
+      }, 1000);
     }
   }
   render() {
@@ -33,73 +34,11 @@ export default class Cart extends Component {
         </div>
         {this.state.clicked &&
           (cartItems.length > 0 ? (
-            <div
-              id="cart-container"
-              onClick={(e) => {
-                if (e.target.id === "cart-container") {
-                  this.toggleClicked();
-                }
-              }}
-            >
-              <div id="cart-inner">
-                <div id="cart-header">
-                  <h1>Shopping Cart... Of DooM</h1>
-                  <button
-                    onClick={() => {
-                      this.toggleClicked();
-                    }}
-                  >
-                    <FaSkullCrossbones />
-                  </button>
-                </div>
-                <div id="cart-list">
-                  {cartItems.map((item, index) => {
-                    return (
-                      <div className="cart-item" key={index}>
-                        <img
-                          className="cart-item-image"
-                          src={process.env.PUBLIC_URL + item.image}
-                          alt={`${item.title} img`}
-                        />
-                        <div className="cart-item-title">
-                          <span className="cart-item-name">{item.title}</span>
-                        </div>
-
-                        <div className="cart-item-details">
-                          <span className="cart-item-price">
-                            Price : R {item.price}
-                          </span>
-                          <span className="cart-item-quantity">
-                            Qty : {item.quantity}
-                          </span>
-                        </div>
-                        <button
-                          className="cart-item-remove"
-                          onClick={() => {
-                            console.log(index);
-                            removeItem(index);
-                          }}
-                        >
-                          Remove <FaTrashAlt />
-                        </button>
-                      </div>
-                    );
-                  })}
-                </div>
-                <div id="cart-footer">
-                  <h1>
-                    Total{" "}
-                    <span>
-                      : R{" "}
-                      {cartItems.reduce((total, current) => {
-                        return (total += current.quantity * current.price);
-                      }, 0)}
-                    </span>
-                  </h1>
-                  <button id="checkout-btn">proceed to checkout</button>
-                </div>
-              </div>
-            </div>
+            <ModalPortal
+              closeModal={this.toggleClicked}
+              removeItem={removeItem}
+              cartItems={cartItems}
+            />
           ) : (
             <div
               id="cart-empty"
