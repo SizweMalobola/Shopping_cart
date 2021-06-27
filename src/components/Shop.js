@@ -84,15 +84,15 @@ export default class Shop extends Component {
   }
   // sets tag state
   activateShopNav(targetElement) {
-    let shopNavDiv = document.querySelector("#shop-nav-div");
-    let navBtns = shopNavDiv.querySelectorAll("button");
+    let shopNavContainer = document.querySelector("#shop-nav-container");
+    let navList = shopNavContainer.querySelectorAll("li");
     // first remove current acive stat
-    navBtns.forEach((btn) => {
-      if (btn.matches("#nav-btn-active")) {
-        btn.removeAttribute("id");
+    navList.forEach((li) => {
+      if (li.matches("#tag-active")) {
+        li.removeAttribute("id");
       }
       //  set new active link
-      targetElement.setAttribute("id", "nav-btn-active");
+      targetElement.setAttribute("id", "tag-active");
     });
     // set tag state
     let chosenTag = targetElement.innerText.toLowerCase();

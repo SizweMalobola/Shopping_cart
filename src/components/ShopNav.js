@@ -1,46 +1,29 @@
 import React, { Component } from "react";
-// import { FaSkull } from "react-icons/fa";
+import styles from "./shopNavStyle.module.css";
 export default class ShopNav extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.tags = ["all", "gore", "slasher", "foreign"];
   }
 
   render() {
     const { activationHandler } = this.props;
     return (
-      <div id="shop-nav-div">
-        <button disabled={true}>Choose Tag</button>
-        <button
-          id="nav-btn-active"
-          onClick={(e) => {
-            activationHandler(e.target);
-          }}
-        >
-          All
-        </button>
-        <button
-          onClick={(e) => {
-            activationHandler(e.target);
-          }}
-        >
-          Gore
-        </button>
-        <button
-          onClick={(e) => {
-            activationHandler(e.target);
-          }}
-        >
-          Slasher
-        </button>
-        <button
-          onClick={(e) => {
-            activationHandler(e.target);
-          }}
-        >
-          Foreign
-        </button>
-      </div>
+      <ul className={styles["container"]} id="shop-nav-container">
+        {this.tags.map((val, index) => {
+          return (
+            <li
+              key={index + 222}
+              onClick={(e) => {
+                activationHandler(e.target);
+              }}
+            >
+              {val}
+            </li>
+          );
+        })}
+      </ul>
     );
   }
 }

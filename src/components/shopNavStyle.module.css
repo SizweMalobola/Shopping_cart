@@ -1,0 +1,16 @@
+@media screen and (min-width: 320px) {
+  .container {
+    display: flex;
+    padding: 5px 2rem;
+  }
+  .container > li {
+    list-style: none;
+    margin-right: 15px;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    background-color: var(--orange-secondary);
+    padding: 1px;
+    border-radius: 5px;
+    color: var(--gray-primary);
+  }
+}
