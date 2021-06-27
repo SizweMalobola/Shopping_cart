@@ -4,6 +4,7 @@ import Cart from "./Cart";
 import ShopGrid from "./ShopGrid";
 import ShopNav from "./ShopNav";
 import "./shopStyles.css";
+import data from "../data.json";
 export default class Shop extends Component {
   constructor(props) {
     super(props);
@@ -11,128 +12,7 @@ export default class Shop extends Component {
     this.state = {
       cartArray: [],
       tag: "all",
-      moviesArray: [
-        {
-          tag: ["gore"],
-          price: 145,
-          title: "Army Of Darkness",
-          image: "/assets/army-of-darkness.jpeg",
-        },
-        {
-          tag: [],
-          price: 145,
-          title: "Cabinet Of Dr Caligari",
-          image: "/assets/cabinet-of-dr-caligari.jpeg",
-        },
-        {
-          tag: [],
-          price: 145,
-          title: "Carrie",
-          image: "/assets/carrie.jpeg",
-        },
-        {
-          tag: ["slasher"],
-          price: 145,
-          title: "Childs Play",
-          image: "/assets/childs-play.jpeg",
-        },
-        {
-          tag: ["gore"],
-          price: 145,
-          title: "Evil Dead 2",
-          image: "/assets/evil-dead-2.jpeg",
-        },
-        {
-          tag: ["gore"],
-          price: 145,
-          title: "From Beyond",
-          image: "/assets/from-beyond.png",
-        },
-        {
-          tag: ["slasher"],
-          price: 145,
-          title: "Helloween",
-          image: "/assets/helloween.jpeg",
-        },
-        {
-          tag: ["gore"],
-          price: 145,
-          title: "Hellraiser",
-          image: "/assets/hellraiser.jpeg",
-        },
-        {
-          tag: [],
-          price: 145,
-          title: "I Spit On Your Grave",
-          image: "/assets/i-spit-on-your-grave.jpeg",
-        },
-        {
-          tag: [],
-          price: 145,
-          title: "The Blair Witch Project",
-          image: "/assets/the-blair-witch-project.jpeg",
-        },
-        {
-          tag: ["gore"],
-          price: 145,
-          title: "The Evil Dead",
-          image: "/assets/the-evil-dead.jpeg",
-        },
-        {
-          tag: ["gore"],
-          price: 145,
-          title: "The Hills Have Eyes",
-          image: "/assets/the-hills-have-eyes.png",
-        },
-        {
-          tag: [],
-          price: 145,
-          title: "The Texas Chainsaw Massacre",
-          image: "/assets/the-texas-chainsaw-massacre.jpeg",
-        },
-        {
-          tag: ["foreign"],
-          price: 145,
-          title: "Ringu",
-          image: "/assets/ringu.jpeg",
-        },
-        {
-          tag: [],
-          price: 145,
-          title: "Rosemary's Baby",
-          image: "/assets/rosemarys-baby.jpeg",
-        },
-        {
-          tag: ["foreign"],
-          price: 145,
-          title: "Suspiria",
-          image: "/assets/suspiria.jpeg",
-        },
-        {
-          tag: [],
-          price: 145,
-          title: "The Wicker Man",
-          image: "/assets/the-wicker-man.jpeg",
-        },
-        {
-          tag: ["gore"],
-          price: 145,
-          title: "Videodrome",
-          image: "/assets/videodrome.jpeg",
-        },
-        {
-          tag: ["gore", "foreign"],
-          price: 145,
-          title: "Rec",
-          image: "/assets/rec.jpeg",
-        },
-        {
-          tag: ["gore", "slasher"],
-          price: 145,
-          title: "Sleepaway Camp",
-          image: "/assets/sleepaway-camp.jpeg",
-        },
-      ],
+      moviesArray: data,
     };
     this.getObj = this.getObj.bind(this);
     this.updateCart = this.updateCart.bind(this);
