@@ -7,7 +7,8 @@
     text-align: center;
     position: relative;
     padding: 5px 0;
-    background-color: royalblue;
+    background-color: var(--white-primary);
+    box-shadow: -2px 2px 2px black;
   }
   .card-top {
     width: 90%;
@@ -19,11 +20,11 @@
   .card-top img {
     width: 100%;
     height: 150px;
-    /* object-fit: cover; */
   }
 
   .title {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
   }
   .card-bottom {
     width: 100%;
@@ -33,14 +34,28 @@
     justify-content: space-between;
   }
   .card-bottom > div {
-    /* position: absolute; */
     bottom: 10px;
   }
   .qty-div {
     margin-bottom: 5px;
     font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--gray-primary);
+  }
+  .qty-div span {
+    padding-right: 5px;
+  }
+  .qty-div input {
+    background-color: transparent;
+    border: solid 2px var(--gray-primary);
+    border-radius: 4px;
   }
   .add-btn {
     width: 100%;
+    text-transform: capitalize;
+    border: none;
+    background-color: var(--gray-primary);
+    padding: 5px 0;
+    color: var(--white-primary);
   }
 }
