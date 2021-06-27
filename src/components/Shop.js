@@ -3,7 +3,7 @@ import Card from "./Card";
 import Cart from "./Cart";
 import ShopGrid from "./ShopGrid";
 import ShopNav from "./ShopNav";
-import "./shopStyles.css";
+import styles from "./shopStyle.module.css";
 import data from "../data.json";
 export default class Shop extends Component {
   constructor(props) {
@@ -21,11 +21,13 @@ export default class Shop extends Component {
     this.cartLocalStorage = this.cartLocalStorage.bind(this);
   }
   // instance methods
+  // movie objects are saved to cartArray
   getObj(obj) {
     if (this.state.cartArray.length > 0) {
       this.state.cartArray.forEach((cartObj, index) => {
         if (cartObj.title === obj.title) {
           if (cartObj.quantity === 3) {
+            return;
           } else if (cartObj.quantity + obj.quantity <= 3) {
             let items = [...this.state.cartArray];
             let item = { ...items[index] };
@@ -51,6 +53,7 @@ export default class Shop extends Component {
       });
     }
   }
+  // cartArray is stringified and save to local storage
   cartLocalStorage() {
     const state = this.state.cartArray;
     const getCircularReplacer = () => {
@@ -68,17 +71,18 @@ export default class Shop extends Component {
     const cartContent = JSON.stringify(state, getCircularReplacer());
     localStorage.setItem("cart", cartContent);
   }
+  // number of items in cartArray is dispayed on #cart-span
   updateCart() {
     const cartSpan = document.querySelector("#cart-span");
     cartSpan.innerText = this.state.cartArray.length;
-    console.log(this.state.cartArray);
   }
+  // removes item inside cartArray based on its index
   removeCartItem(index) {
     let items = this.state.cartArray;
     let removedItem = items.splice(index, 1);
     this.setState({ cartArray: items });
-    console.log(`item ${removedItem.title} was removed`);
   }
+  // sets tag state
   activateShopNav(targetElement) {
     let shopNavDiv = document.querySelector("#shop-nav-div");
     let navBtns = shopNavDiv.querySelectorAll("button");
@@ -94,30 +98,32 @@ export default class Shop extends Component {
     let chosenTag = targetElement.innerText.toLowerCase();
     this.setState({ tag: chosenTag });
   }
+
   // lifecyle methods
   componentDidMount() {
-    // local cart storage
-    console.log("componentDidMount");
+    // cart data is retrieved from local storage
     let cart = localStorage.getItem("cart");
     this.setState({ cartArray: JSON.parse(cart) });
   }
   componentDidUpdate() {
-    console.log("componentDidUpdate");
+    // number of items in cart is updated on every update
     this.updateCart();
   }
   componentWillUnmount() {
+    // before shop route is unmounted cartArray state is saved to local storage
     this.cartLocalStorage();
-    console.log("stored");
   }
 
   render() {
     return (
-      <div id="shop-div">
+      <div className={styles["container"]}>
         <Cart
           removeItem={this.removeCartItem}
           cartItems={this.state.cartArray}
         />
+
         <ShopNav activationHandler={this.activateShopNav} />
+
         <ShopGrid>
           {this.state.moviesArray
             .filter((obj) => {
