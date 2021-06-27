@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import styles from "./shopGridStyle.module.css";
 
 export default class ShopGrid extends Component {
   r;
@@ -9,6 +10,10 @@ export default class ShopGrid extends Component {
   }
 
   render() {
-    return <div id="shop-grid-div">{this.props.children}</div>;
+    return (
+      <div className={styles["container"]} id="shop-grid-div">
+        {this.props.children}
+      </div>
+    );
   }
 }
