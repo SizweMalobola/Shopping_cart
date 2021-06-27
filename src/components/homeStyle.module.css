@@ -1,0 +1,51 @@
+.home-div {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.hero {
+  position: absolute;
+  top: 5rem;
+  width: 90%;
+}
+.hero span {
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0.4rem;
+  font-family: "Walter Turncoat", cursive;
+  font-weight: 800;
+}
+.hero h1 {
+  font-size: 4rem;
+  font-family: "Creepster", cursive;
+  /* font-size: 72px; */
+  background: linear-gradient(#5d9b9a, #e3b8a5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.cta {
+  position: absolute;
+  bottom: 5rem;
+  padding: 10px;
+  border: 1px solid var(--gray-primary);
+  background-color: var(--yellow-primary);
+  width: 80%;
+  box-shadow: -8px 4px 2px black;
+}
+.cta p {
+  font-family: "Walter Turncoat", cursive;
+  margin-bottom: 0.8rem;
+  font-weight: 800;
+  color: red;
+}
+.cta a {
+  text-decoration: none;
+  background-color: black;
+  padding: 4px;
+  border-radius: 4px;
+  color: red;
+  color: var(--white-primary);
+}
