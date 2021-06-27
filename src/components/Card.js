@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import styles from "./cardStyle.module.css";
 export default class Card extends Component {
   constructor(props) {
     super(props);
@@ -18,20 +18,19 @@ export default class Card extends Component {
   render() {
     const { image, title, handler } = this.props;
     return (
-      <div id={this.makeId(title)} className="card-div">
-        <div
-          style={{ backgroundImage: `url(${process.env.PUBLIC_URL + image})` }}
-          className="card-top"
-        ></div>
-        <div className="card-bottom">
-          <h1>{title}</h1>
+      <div id={this.makeId(title)} className={styles["container"]}>
+        <div className={styles["card-top"]}>
+          <img src={process.env.PUBLIC_URL + image} alt="movie poster" />
+        </div>
+        <div className={styles["card-bottom"]}>
+          <h4 className={styles["title"]}>{title}</h4>
           <div>
-            <div>
+            <div className={styles["qty-div"]}>
               <span>QTY:</span>
-              <input className="quantity" type="number" max="3" min="1"></input>
+              <input type="number" max="3" min="1"></input>
             </div>
             <button
-              className="add-to-cart"
+              className={styles["add-btn"]}
               onClick={(e) => {
                 let quantity = e.target.previousSibling.lastChild;
                 if (quantity.value >= 1) {
