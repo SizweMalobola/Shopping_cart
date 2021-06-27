@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { FaShoppingCart } from "react-icons/fa";
 import ModalPortal from "./ModalPortal";
-
+import styles from "./cartStyle.module.css";
+import { FiShoppingCart } from "react-icons/all";
 export default class Cart extends Component {
   constructor(props) {
     super(props);
@@ -27,10 +27,13 @@ export default class Cart extends Component {
     const { cartItems, removeItem } = this.props;
     return (
       <>
-        <div id="cart" onClick={() => this.toggleClicked()}>
-          <h1>
-            <FaShoppingCart /> <span id="cart-span">0</span>
-          </h1>
+        <div
+          className={styles["container"]}
+          id="cart"
+          onClick={() => this.toggleClicked()}
+        >
+          <FiShoppingCart />
+          <span id="cart-span">0</span>
         </div>
         {this.state.clicked &&
           (cartItems.length > 0 ? (
