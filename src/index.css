@@ -2,11 +2,17 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  /*Todo change fonts */
-  font-family: "Pirata One", cursive;
+  font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+:root {
+  --orange-primary: #e7473c;
+  --orange-secondary: #f08f89;
+  --white-primary: #f0f0f0;
+  --gray-primary: #3c3b3b;
+}
+
 button {
   transition: all linear 300ms;
 }
