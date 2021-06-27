@@ -3,6 +3,7 @@
     display: flex;
     width: 100%;
     justify-content: center;
+    height: 10vh;
   }
   .nav-links-div {
     width: 100%;
@@ -19,7 +20,6 @@
     background-color: transparent;
     transition: all linear 300ms;
     border-radius: 4px;
-    /* font-weight: 800px; */
   }
   .nav-links-div a:hover {
     background-color: var(--gray-primary);
