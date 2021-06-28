@@ -39,4 +39,8 @@
   .cart-empty h4 {
     margin-bottom: 5px;
   }
+  .modal-open {
+    height: 100vh;
+    overflow: hidden;
+  }
 }

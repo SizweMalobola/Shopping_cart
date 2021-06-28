@@ -22,6 +22,13 @@ export default class Cart extends Component {
         this.toggleClicked();
       }, 1000);
     }
+    // for setting container overflow to hidden when clicked true
+    const bodyEl = document.querySelector("body");
+    if (this.state.clicked) {
+      bodyEl.classList.toggle(styles["modal-open"], true);
+    } else {
+      bodyEl.classList.toggle(styles["modal-open"], false);
+    }
   }
   render() {
     const { cartItems, removeItem } = this.props;
