@@ -10,8 +10,11 @@
   --orange-primary: #e7473c;
   --orange-secondary: #f08f89;
   --yellow-primary: #fecc06;
+  --yellow-secondary: #e2a823;
   --white-primary: #f0f0f0;
   --gray-primary: #3c3b3b;
+  --green-dark: #424731;
+  --green-light: #6d903c;
 }
 
 button {
