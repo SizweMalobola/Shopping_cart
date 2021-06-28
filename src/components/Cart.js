@@ -44,13 +44,14 @@ export default class Cart extends Component {
             />
           ) : (
             <div
-              id="cart-empty"
+              className={styles["cart-empty"]}
               ref={(div) => (this.isEmptyRef = div)}
               onClick={() => {
                 this.toggleClicked();
               }}
             >
-              <h3>Your Cart is Empty</h3>
+              <h4>(￣Д￣；；</h4>
+              <h3>Your Cart is Empty </h3>
             </div>
           ))}
       </>
