@@ -7,7 +7,7 @@
     text-align: center;
     position: relative;
     padding: 5px 0;
-    background-color: var(--white-primary);
+    background-color: var(--green-dark);
     box-shadow: -2px 2px 2px black;
   }
   .card-top {
@@ -25,6 +25,8 @@
   .title {
     font-size: 1.1rem;
     margin-bottom: 5px;
+    font-family: "Walter Turncoat", cursive;
+    color: var(--yellow-secondary);
   }
   .card-bottom {
     width: 100%;
@@ -40,21 +42,22 @@
     margin-bottom: 5px;
     font-size: 0.8rem;
     font-weight: 800;
-    color: var(--gray-primary);
+    color: var(--white-primary);
   }
   .qty-div span {
     padding-right: 5px;
+    font-weight: 300;
   }
   .qty-div input {
     background-color: transparent;
-    border: solid 2px var(--gray-primary);
+    border: solid 2px var(--white-primary);
     border-radius: 4px;
   }
   .add-btn {
     width: 100%;
     text-transform: capitalize;
     border: none;
-    background-color: var(--gray-primary);
+    background-color: var(--green-light);
     padding: 5px 0;
     color: var(--white-primary);
   }
