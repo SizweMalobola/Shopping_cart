@@ -1,0 +1,105 @@
+@media screen and (min-width: 320px) {
+  .container {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: var(--orange-primary);
+    overflow-y: auto;
+  }
+  .modal-inner {
+    background-color: var(--orange-primary);
+    height: 100%;
+    padding-top: 2rem;
+  }
+  .modal-header h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-family: "Walter Turncoat", cursive;
+    color: var(--white-primary);
+  }
+  .modal-header button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    color: var(--orange-primary);
+  }
+  .modal-header span {
+    display: block;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    font-size: 0.8rem;
+    color: var(--gray-primary);
+  }
+  .cart-items-container {
+    background-color: var(--orange-primary);
+    border: 2px solid var(--gray-primary);
+    height: 75%;
+    overflow-y: auto;
+    margin-bottom: 5px;
+    padding: 0 10px;
+  }
+  .cart-item {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gray-primary);
+    position: relative;
+  }
+  .cart-img-div {
+    object-fit: cover;
+    width: 100px;
+    height: 150px;
+    margin-bottom: 5px;
+  }
+  .cart-img-div img {
+    width: 100%;
+    height: 100%;
+  }
+  .cart-item-title {
+    margin-bottom: 5px;
+  }
+  .cart-item-title span {
+    font-family: "Walter Turncoat", cursive;
+    font-size: 1rem;
+  }
+  .cart-item-details {
+    position: absolute;
+    left: 7rem;
+    top: 7px;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-size: 0.8rem;
+  }
+  .cart-item-remove {
+    padding: 3px;
+    background-color: red;
+    border: 1px solid var(--gray-primary);
+    border-radius: 4px;
+    color: var(--white-primary);
+  }
+  .cart-footer {
+    padding: 0 5px;
+  }
+  .cart-footer h1 {
+    font-size: 1.8rem;
+    color: var(--white-primary);
+    margin-bottom: 5px;
+  }
+  .cart-footer button {
+    padding: 5px;
+    border: 1px solid var(--green-dark);
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: var(--green-light);
+    color: var(--white-primary);
+  }
+}
