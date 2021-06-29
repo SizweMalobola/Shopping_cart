@@ -7,3 +7,9 @@
     width: 95%;
   }
 }
+@media screen and (min-width: 540px) {
+  .container {
+    gap: 1rem;
+    width: 90%;
+  }
+}
