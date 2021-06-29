@@ -87,3 +87,24 @@
     width: 75%;
   }
 }
+@media screen and (min-width: 768px) {
+  .hero span {
+    margin-left: 2.5rem;
+    font-size: 2rem;
+  }
+  .hero h1 {
+    font-size: 8rem;
+  }
+  .head-img {
+    width: 70%;
+  }
+  .cta {
+    width: 70%;
+  }
+  .cta p {
+    font-size: 1.5rem;
+  }
+  .cta a {
+    font-size: 1.5rem;
+  }
+}

@@ -65,3 +65,26 @@
     color: var(--white-primary);
   }
 }
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 10px 0;
+    background-color: var(--green-dark);
+    box-shadow: -5px 5px 5px black;
+  }
+  .card-top {
+    height: 250px;
+    object-fit: cover;
+  }
+  .card-top img {
+    height: 100%;
+  }
+  .title {
+    font-size: 1.6rem;
+  }
+  .qty-div span {
+    font-size: 1rem;
+  }
+  .add-btn {
+    font-size: 1rem;
+  }
+}
