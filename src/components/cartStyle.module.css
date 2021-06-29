@@ -5,6 +5,7 @@
     right: 1.5rem;
     color: var(--white-primary);
     z-index: 2;
+    top: 10.5%;
   }
   .container:hover {
     cursor: pointer;

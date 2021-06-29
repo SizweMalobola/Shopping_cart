@@ -2,6 +2,7 @@
   .container {
     display: flex;
     padding: 5px 2rem;
+    width: 100%;
   }
   .container > li {
     list-style: none;
