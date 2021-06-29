@@ -79,3 +79,11 @@
     margin-left: 2.2rem;
   }
 }
+@media screen and (min-width: 539px) {
+  .hero span {
+    margin-left: 6.2rem;
+  }
+  .head-img {
+    width: 75%;
+  }
+}
