@@ -59,3 +59,23 @@
     height: 100%;
   }
 }
+@media screen and (min-width: 359px) {
+  .container h1 {
+    font-size: 1.65rem;
+  }
+}
+@media screen and (min-width: 374px) {
+  .container h1 {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (min-width: 410px) {
+  .container h1 {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 413px) {
+  .container h1 {
+    font-size: 1.9rem;
+  }
+}
