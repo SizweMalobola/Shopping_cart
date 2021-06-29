@@ -13,9 +13,9 @@
     width: 90%;
   }
   .hero span {
+    margin-left: 2px;
     font-size: 0.9rem;
     display: block;
-    margin-bottom: 0.4rem;
     font-family: "Walter Turncoat", cursive;
     font-weight: 800;
     color: aliceblue;
@@ -28,11 +28,11 @@
     -webkit-text-fill-color: transparent;
   }
   .head-img {
-    width: 100%;
+    width: 80%;
   }
   .cta {
     position: absolute;
-    bottom: 4rem;
+    bottom: 1rem;
     padding: 10px;
     border: 1px solid var(--gray-primary);
     background-color: var(--yellow-primary);
@@ -40,17 +40,42 @@
     box-shadow: -8px 4px 2px black;
   }
   .cta p {
+    font-size: 0.8rem;
     font-family: "Walter Turncoat", cursive;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
     font-weight: 800;
     color: red;
   }
   .cta a {
+    font-size: 0.8rem;
     text-decoration: none;
     background-color: black;
     padding: 4px;
     border-radius: 4px;
     color: red;
     color: var(--white-primary);
+  }
+}
+
+@media screen and (min-width: 374px) {
+  .hero {
+    width: fit-content;
+  }
+  .hero span {
+    margin-left: 1rem;
+  }
+  .hero h1 {
+    text-align: center;
+  }
+  .cta p {
+    font-size: 0.9rem;
+  }
+  .cta a {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 413px) {
+  .hero span {
+    margin-left: 2.2rem;
   }
 }
