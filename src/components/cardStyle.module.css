@@ -23,7 +23,10 @@
   }
 
   .title {
-    font-size: 1.1rem;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    text-align: center;
+    font-size: 1rem;
     margin-bottom: 5px;
     font-family: "Walter Turncoat", cursive;
     color: var(--yellow-secondary);
