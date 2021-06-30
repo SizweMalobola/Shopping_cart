@@ -1,4 +1,4 @@
-@media screen and (min-width: 320px) {
+@media only screen and (min-width: 320px) {
   .home-div {
     height: 90vh;
     display: flex;
@@ -57,7 +57,7 @@
   }
 }
 
-@media screen and (min-width: 374px) {
+@media only screen and (min-width: 374px) {
   .hero {
     width: fit-content;
   }
@@ -74,12 +74,21 @@
     font-size: 0.9rem;
   }
 }
-@media screen and (min-width: 413px) {
+@media only screen and (min-width: 413px) {
   .hero span {
     margin-left: 2.2rem;
   }
 }
-@media screen and (min-width: 539px) {
+/*  */
+@media only screen and (min-width: 499px) {
+  .hero {
+    width: auto;
+  }
+  .hero span {
+    font-size: 10rem;
+  }
+}
+@media only screen and (min-width: 539px) {
   .hero span {
     margin-left: 6.2rem;
   }
@@ -87,7 +96,7 @@
     width: 75%;
   }
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .hero span {
     margin-left: 2.5rem;
     font-size: 2rem;
