@@ -37,7 +37,12 @@
   }
 }
 @media only screen and (min-width: 413px) {
-  \ .nav-links-div {
+  .nav-links-div {
     font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 499px) {
+  .nav-links-div {
+    font-size: 1.6rem;
   }
 }
