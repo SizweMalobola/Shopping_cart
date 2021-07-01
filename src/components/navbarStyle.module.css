@@ -36,3 +36,8 @@
     font-size: 1.2rem;
   }
 }
+@media only screen and (min-width: 413px) {
+  \ .nav-links-div {
+    font-size: 1.4rem;
+  }
+}
