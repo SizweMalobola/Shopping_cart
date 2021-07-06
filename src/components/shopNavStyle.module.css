@@ -1,8 +1,8 @@
 @media screen and (min-width: 320px) {
   .container {
     display: flex;
-    padding: 5px 2rem;
-    width: 100%;
+    padding: 5px 0;
+    width: 95%;
   }
   .container > li {
     list-style: none;
@@ -15,9 +15,14 @@
     color: var(--gray-primary);
   }
 }
+@media screen and (min-width: 540px) {
+  .container {
+    width: 90%;
+  }
+}
 @media screen and (min-width: 768px) {
   .container {
-    padding: 6px 2.2rem;
+    padding: 6px 0;
   }
   .container > li {
     font-size: 1.6rem;
