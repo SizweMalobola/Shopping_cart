@@ -29,6 +29,7 @@
   }
   .head-img {
     width: 80%;
+    max-width: 500px;
   }
   .cta {
     position: absolute;
@@ -85,12 +86,12 @@
     width: auto;
   }
   .hero span {
-    font-size: 10rem;
+    font-size: 2.3rem;
   }
 }
 @media only screen and (min-width: 539px) {
   .hero span {
-    margin-left: 6.2rem;
+    margin-left: 2.2rem;
   }
   .head-img {
     width: 75%;
