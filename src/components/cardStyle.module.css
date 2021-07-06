@@ -7,7 +7,7 @@
     text-align: center;
     position: relative;
     padding: 5px 0;
-    background-color: var(--green-dark);
+    background-color: rgb(204, 28, 28);
     box-shadow: -2px 2px 2px black;
   }
   .card-top {
@@ -53,16 +53,20 @@
   }
   .qty-div input {
     background-color: transparent;
-    border: solid 2px var(--white-primary);
+    border: solid 1px var(--white-primary);
     border-radius: 4px;
   }
   .add-btn {
-    width: 100%;
+    width: 90%;
     text-transform: capitalize;
     border: none;
-    background-color: var(--green-light);
+    background-color: var(--gray-primary);
     padding: 5px 0;
-    color: var(--white-primary);
+    color: white;
+  }
+  .add-btn:hover {
+    width: 100%;
+    background-color: #302f2f;
   }
 }
 @media screen and (min-width: 768px) {
