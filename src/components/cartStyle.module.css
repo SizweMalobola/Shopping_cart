@@ -2,7 +2,7 @@
   .container {
     font-size: 1.7rem;
     position: fixed;
-    right: 1.5rem;
+    right: 6%;
     color: var(--white-primary);
     z-index: 2;
     top: 10.5%;
