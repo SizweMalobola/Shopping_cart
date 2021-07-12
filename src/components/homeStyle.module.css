@@ -81,15 +81,28 @@
   }
 }
 /*  */
-@media only screen and (min-width: 499px) {
+@media only screen and (min-width: 500px) {
   .hero {
-    width: auto;
+    max-width: 500px;
   }
   .hero span {
-    font-size: 2.3rem;
+    margin-left: 3.5rem;
+    position: relative;
+    font-size: 1.5rem;
+  }
+  .hero h1 {
+    position: relative;
+    font-size: 4.5rem;
+  }
+  .cta {
+    bottom: 2rem;
+  }
+  .cta p,
+  .cta a {
+    font-size: 1rem;
   }
 }
-@media only screen and (min-width: 539px) {
+/* @media only screen and (min-width: 539px) {
   .hero span {
     margin-left: 2.2rem;
   }
@@ -118,3 +131,12 @@
     font-size: 1.5rem;
   }
 }
+@media only screen and (min-width: 1024px) {
+  .hero span {
+    margin-left: 10.6rem;
+    font-size: 2rem;
+  }
+  .cta {
+    bottom: 2rem;
+  }
+} */
