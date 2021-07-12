@@ -102,35 +102,34 @@
     font-size: 1rem;
   }
 }
-/* @media only screen and (min-width: 539px) {
+@media only screen and (min-width: 600px) {
   .hero span {
-    margin-left: 2.2rem;
+    margin-left: 1rem;
   }
-  .head-img {
-    width: 75%;
+  .hero h1 {
+    font-size: 5.5rem;
   }
 }
 @media only screen and (min-width: 768px) {
+  .hero {
+    max-width: 600px;
+  }
   .hero span {
-    margin-left: 2.5rem;
-    font-size: 2rem;
+    margin-left: 2.4rem;
   }
   .hero h1 {
-    font-size: 8rem;
-  }
-  .head-img {
-    width: 70%;
+    font-size: 6rem;
   }
   .cta {
     width: 70%;
+    max-width: 700px;
   }
-  .cta p {
-    font-size: 1.5rem;
-  }
+  .cta p,
   .cta a {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
+/*
 @media only screen and (min-width: 1024px) {
   .hero span {
     margin-left: 10.6rem;
