@@ -11,10 +11,10 @@ export default class Home extends Component {
           <h1>Little shop Of Horrors</h1>
         </div>
         <picture className={styles["head-container"]}>
-          <source
+          {/* <source
             media="(min-width:768px)"
             srcSet={process.env.PUBLIC_URL + "/assets/skullface.png"}
-          />
+          /> */}
           <img
             className={styles["head-img"]}
             src={process.env.PUBLIC_URL + "/assets/head.png"}
