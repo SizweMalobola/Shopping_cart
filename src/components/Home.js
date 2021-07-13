@@ -10,11 +10,17 @@ export default class Home extends Component {
           <span>WELCOME TO THE...</span>
           <h1>Little shop Of Horrors</h1>
         </div>
-        <img
-          className={styles["head-img"]}
-          src={process.env.PUBLIC_URL + "/assets/head.png"}
-          alt="head logo thing"
-        ></img>
+        <picture className={styles["head-container"]}>
+          <source
+            media="(min-width:768px)"
+            srcSet={process.env.PUBLIC_URL + "/assets/skullface.png"}
+          />
+          <img
+            className={styles["head-img"]}
+            src={process.env.PUBLIC_URL + "/assets/head.png"}
+            alt="head logo thing"
+          ></img>
+        </picture>
         <div className={styles["cta"]}>
           <p>
             If our collection of films can't quench your thrist for the

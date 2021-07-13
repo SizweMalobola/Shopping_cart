@@ -27,9 +27,11 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  .head-container {
+    text-align: center;
+  }
   .head-img {
     width: 80%;
-    max-width: 500px;
   }
   .cta {
     position: absolute;
@@ -111,6 +113,10 @@
   }
 }
 @media only screen and (min-width: 768px) {
+  .head-container {
+    text-align: center;
+    width: 60%;
+  }
   .hero {
     max-width: 600px;
   }
@@ -129,13 +135,10 @@
     font-size: 1.2rem;
   }
 }
-/*
+
 @media only screen and (min-width: 1024px) {
-  .hero span {
-    margin-left: 10.6rem;
-    font-size: 2rem;
+  .head-img {
+    width: 80%;
+    max-width: 500px;
   }
-  .cta {
-    bottom: 2rem;
-  }
-} */
+}
