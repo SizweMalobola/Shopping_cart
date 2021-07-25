@@ -31,4 +31,4 @@ This projects implements the use of ReactJS concepts and how they can be used to
 
 ## Live Demo
 
-[Live Demo Link](https://sizwemalobola.github.io/Shopping_cart/)
+[Live Demo Link](https://angry-hugle-6ea173.netlify.app/)
