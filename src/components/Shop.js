@@ -103,11 +103,14 @@ export default class Shop extends Component {
   componentDidMount() {
     // cart data is retrieved from local storage
     let cart = localStorage.getItem("cart");
-    this.setState({ cartArray: JSON.parse(cart) });
+    let parsedArray = JSON.parse(cart);
+    this.setState({ cartArray: parsedArray });
   }
   componentDidUpdate() {
     // number of items in cart is updated on every update
     this.updateCart();
+    // save to local storage on every update
+    this.cartLocalStorage();
   }
   componentWillUnmount() {
     // before shop route is unmounted cartArray state is saved to local storage
