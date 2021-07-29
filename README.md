@@ -27,7 +27,9 @@ This projects implements the use of ReactJS concepts and how they can be used to
 - Use of React hooks & lifecycle methods.
 - Use of core React concepts like props & state.
 
+### Issues
 
+- Shoping page doesn't load, only works when running app on development mode.
 
 ## Live Demo
 
